@@ -9,10 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Project Replika Landing Page harisenin.com dengan Tailwind</title>
+    <style>
+      #theText::before {
+      content: "Pindah Jalur Karir.";
+      animation: animate infinite 8s;
+      padding-left: 10px;
+      color: #2051E1;
+      }
+
+      @keyframes animate {
+      0% {content: "Beda Jurusan."; }
+      50% {content: "Belum Lusus Kuliah.";}
+      75% {content: "Kurang Pengalaman.";}
+      }
+    </style>
 </head>
 <body>
 <!-- Navigasi -->
-  <div class="header-2">
+  <div>
     <nav class="bg-white py-2 md:py-4">
       <div class="container px-6 mx-auto md:flex md:items-center">
         <div class="flex justify-between items-center">
@@ -37,7 +51,8 @@
       <div class="container  px-6 mx-auto">       
         <div class="box-border flex flex-wrap">
           <hero-content class="w-full md:w-3/5 bg-slate-100 "> 
-            <h1 class="text-3xl font-bold text-black-700 mb-4">Raih Karir Impianmu,<br> Walau Berat dan Lelah</h1>
+            <h1 class="text-3xl font-bold text-black-700 mb-4">Raih Karir Impianmu,<br> Walau<!-- efek -->
+              <span id="theText"></span></h1>
             <P class="text-base">Kuasai skill dan dapatkan pekerjaan impianmu. Sudah 3385 alumni berhasil meraih karir impian mereka. Apabila setelah lulus kamu belum bekerja dalam 365 hari, kamu berhak mendapatkan refund up to 110% dari investasimu. Kuasai skill dan dapatkan pekerjaan impianmu.</P>
             <button class="bg-teal-500 text-white font-bold text-sm py-2 px-4 my-8 rounded hover:bg-teal-700" ><a href="#">Temukan Bootcamp Yang Tepat</a></button>
             <div class="flex">
@@ -184,8 +199,8 @@
 
     <!-- footer -->
     <div class="sm:flex sm:flex-wrap sm:-mx-4 mt-6 pt-6 sm:mt-12 sm:pt-12 border-t py-8 ">
-      <div class="sm:w-full px-4 md:w-1/6">
-        &copy PT.Karya Kaya Bahagia 2020
+      <div>
+        &copy PT.Karya Kaya Bahagia 2020. 
       </div>
      
     </div>
